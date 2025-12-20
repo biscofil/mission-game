@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Your session - Mission game{% endblock %}
+
+{% block content %}
+<h1>Your session</h1>
+
+<hr>
+
+<p>Session ID: <code>{{ session["uuid"] }}</code></p>
+
+<hr>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Player Name</th>
+        <th>Ready?</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for session_player in session["players"] %}
+      <tr>
+        <td>{{ session_player.player_name }}</td>
+        <td>
+          {% if session_player.ready %}
+
+          {% if session_player.browser_session_id == current_browser_session_id %}
+          <form method="POST" action="/session/not_ready" class="d-inline">
+            <input type="hidden" name="session_uuid" value="{{ session["uuid"] }}" />
+            <button class="btn btn-sm btn-warning" type="submit">Not ready</button>
+          </form>
+          {% else %}
+          <span class="text-success">Ready</span>
+          {% endif %}
+
+          {% elif not session["current_browser_logged"] %}
+          <form method="POST" action="/session/ready" class="d-inline">
+            <input type="hidden" name="session_uuid" value="{{ session["uuid"] }}" />
+            <input type="hidden" name="player_id" value="{{ session_player.player_id }}" />
+            <button class="btn btn-sm btn-primary" type="submit">That's me</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<hr>
+
+<button class="btn btn-success" {% if not session["all_ready"] %}disabled{% endif %}>Start the game</button>
+
+{% endblock %}

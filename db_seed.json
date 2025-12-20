@@ -1,0 +1,31 @@
+{
+  "missions" : [
+    {
+      "description" : "You need to get a selphie with your target player."
+    },
+    {
+      "description" : "You need to get a hug from your target player."
+    },
+    {
+      "description" : "You need to get your target player to sing a song."
+    },
+    {
+      "description" : "You need to get your target player to dance."
+    },
+    {
+      "description" : "You need to get a high-five from your target player."
+    },
+    {
+      "description" : "You need to get your target player to tell a joke."
+    },
+    {
+      "description" : "You need to get your target player to share a secret."
+    },
+    {
+      "description" : "You need to get your target player to do a funny face."
+    },
+    {
+      "description" : "You need to get your target player to do 10 jumping jacks."
+    }
+  ]
+}
