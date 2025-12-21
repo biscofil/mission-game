@@ -23,6 +23,7 @@ class Mission(db.Model):
     description_en = db.Column(db.String(255), nullable=False)
     description_it = db.Column(db.String(255), nullable=False)
     description_fr = db.Column(db.String(255), nullable=False)
+    approved_on = db.Column(db.DateTime, nullable=True)
     session_missions = db.relationship(
         "SessionMission", backref="mission", lazy=True, cascade="all, delete-orphan"
     )
@@ -46,7 +47,7 @@ class Session(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     m_uuid = db.Column(db.String(36), unique=True, nullable=False)
-    created_at = db.Column(db.DateTime, server_default=db.func.now())
+    created_at = db.Column(db.DateTime, server_default=db.func.now(), nullable=False)
     started_at = db.Column(db.DateTime, nullable=True)
     language = db.Column(db.String(5), default="en", nullable=False)
     session_missions = db.relationship(
@@ -95,6 +96,7 @@ def home():
 def new_session():
     if request.method == "POST":
         names = request.form.getlist("names[]")
+
         language = request.form.get("language", "en").lower()
         if language not in ["en", "it", "fr"]:
             language = "en"
@@ -102,18 +104,23 @@ def new_session():
         # Clean names: remove empty and duplicate names
         names = [name.strip() for name in names if name.strip()]
         names = list(dict.fromkeys(names))
-        if len(names) < 3:
+        if len(names) < 3 or len(names) > 20:
             return (
                 jsonify(
                     {
                         "status": "error",
-                        "message": "At least three players are required to start a session.",
+                        "message": "The number of players must be between 3 and 20.",
                     }
                 ),
                 400,
             )
 
-        missions = Mission.query.order_by(db.func.random()).limit(len(names)).all()
+        missions = Mission.query \
+            .filter_by(approved_on=None) \
+            .order_by(db.func.random()) \
+            .limit(len(names)) \
+            .all()
+        
         if len(missions) < len(names):
             return (
                 jsonify(
@@ -126,7 +133,10 @@ def new_session():
             )
 
         session = Session(
-            m_uuid=uuid.uuid4().hex, created_at=db.func.now(), started_at=None, language=language
+            m_uuid=uuid.uuid4().hex,
+            created_at=db.func.now(),
+            started_at=None,
+            language=language,
         )
         db.session.add(session)
         db.session.flush()
@@ -296,7 +306,8 @@ if __name__ == "__main__":
                         mission = Mission(
                             description_en=mission_data.get("description_en", ""),
                             description_it=mission_data.get("description_it", ""),
-                            description_fr=mission_data.get("description_fr", "")
+                            description_fr=mission_data.get("description_fr", ""),
+                            approved_on=db.func.now(),
                         )
                         db.session.add(mission)
                     db.session.commit()
