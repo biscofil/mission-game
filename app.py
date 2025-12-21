@@ -20,13 +20,25 @@ class Mission(db.Model):
     __tablename__ = "missions"
 
     id = db.Column(db.Integer, primary_key=True)
-    description = db.Column(db.String(255), nullable=False)
+    description_en = db.Column(db.String(255), nullable=False)
+    description_it = db.Column(db.String(255), nullable=False)
+    description_fr = db.Column(db.String(255), nullable=False)
     session_missions = db.relationship(
         "SessionMission", backref="mission", lazy=True, cascade="all, delete-orphan"
     )
 
+    def get_description(self, lang: str = "en") -> str:
+        """Get mission description in the specified language (en, it, fr)."""
+        lang = lang.lower()
+        if lang == "it":
+            return self.description_it
+        elif lang == "fr":
+            return self.description_fr
+        else:
+            return self.description_en
+
     def __repr__(self):
-        return f"<Mission {self.id}: {self.description}>"
+        return f"<Mission {self.id}: {self.description_en}>"
 
 
 class Session(db.Model):
@@ -36,12 +48,13 @@ class Session(db.Model):
     m_uuid = db.Column(db.String(36), unique=True, nullable=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     started_at = db.Column(db.DateTime, nullable=True)
+    language = db.Column(db.String(5), default="en", nullable=False)
     session_missions = db.relationship(
         "SessionMission", backref="session", lazy=True, cascade="all, delete-orphan"
     )
 
     def __repr__(self):
-        return f"<Session {self.id}, UUID: {self.m_uuid}, created_at: {self.created_at}, started_at: {self.started_at}>"
+        return f"<Session {self.id}, UUID: {self.m_uuid}, created_at: {self.created_at}, started_at: {self.started_at}, language: {self.language}>"
 
 
 class SessionMission(db.Model):
@@ -82,6 +95,9 @@ def home():
 def new_session():
     if request.method == "POST":
         names = request.form.getlist("names[]")
+        language = request.form.get("language", "en").lower()
+        if language not in ["en", "it", "fr"]:
+            language = "en"
 
         # Clean names: remove empty and duplicate names
         names = [name.strip() for name in names if name.strip()]
@@ -110,7 +126,7 @@ def new_session():
             )
 
         session = Session(
-            m_uuid=uuid.uuid4().hex, created_at=db.func.now(), started_at=None
+            m_uuid=uuid.uuid4().hex, created_at=db.func.now(), started_at=None, language=language
         )
         db.session.add(session)
         db.session.flush()
@@ -233,7 +249,7 @@ def session():
         ).first()
         if sm:
             session_data["player_mission"] = {
-                "mission_description": sm.mission.description,
+                "mission_description": sm.mission.get_description(session.language),
                 "target_player_name": sm.target_player_name,
             }
 
@@ -278,7 +294,9 @@ if __name__ == "__main__":
                     missions = json.load(f)
                     for mission_data in missions.get("missions", []):
                         mission = Mission(
-                            description=mission_data.get("description", "")
+                            description_en=mission_data.get("description_en", ""),
+                            description_it=mission_data.get("description_it", ""),
+                            description_fr=mission_data.get("description_fr", "")
                         )
                         db.session.add(mission)
                     db.session.commit()
