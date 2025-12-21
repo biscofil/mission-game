@@ -7,12 +7,12 @@
 
 <hr>
 
-<p>Session ID: <code>{{ session["uuid"] }}</code></p>
+<p>Session ID: <code>{{ session["session"].m_uuid }}</code></p>
 
 <hr>
-{% if session["started_at"] %}
+{% if session["session"].started_at %}
 
-<p>Session started at {{ session["started_at"] }}</p>
+<p>Session started at {{ session["session"].started_at }}</p>
 
 <p>
   Your mission: <b>{{ session["player_mission"]["mission_description"] }}</b><br>
@@ -40,7 +40,7 @@
 
           {% if session_player.browser_session_id == current_browser_session_id %}
           <form method="POST" action="/session/not_ready" class="d-inline">
-            <input type="hidden" name="session_uuid" value="{{ session['uuid'] }}" />
+            <input type="hidden" name="session_uuid" value="{{ session['session'].m_uuid }}" />
             <button class="btn btn-sm btn-warning" type="submit">Not ready</button>
           </form>
           {% else %}
@@ -49,7 +49,7 @@
 
           {% elif not session["current_browser_logged"] %}
           <form method="POST" action="/session/ready" class="d-inline">
-            <input type="hidden" name="session_uuid" value="{{ session['uuid'] }}" />
+            <input type="hidden" name="session_uuid" value="{{ session['session'].m_uuid }}" />
             <input type="hidden" name="player_id" value="{{ session_player.player_id }}" />
             <button class="btn btn-sm btn-primary" type="submit">That's me</button>
           </form>
@@ -63,7 +63,7 @@
   <hr>
 
   <form method="POST" action="/session/start">
-    <input type="hidden" name="session_uuid" value="{{ session['uuid'] }}" />
+    <input type="hidden" name="session_uuid" value="{{ session['session'].m_uuid }}" />
     <button class="btn btn-success" {% if not session['all_ready'] %}disabled{% endif %} onclick="form.submit();">
       Start the game
     </button>
