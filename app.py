@@ -246,10 +246,9 @@ def session():
     browser_session_id = get_or_generate_browser_session_id()
 
     session_data = {
-        "uuid": session.m_uuid,
+        "session": session,
         "current_browser_logged": False,
         "players": [],
-        "started_at": session.started_at,
         "player_mission": None,
     }
 
