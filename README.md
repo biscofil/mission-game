@@ -7,6 +7,6 @@ pip install -r requirements.txt
 python3 app.py
 
 # or
-docker build -t night_mission:latest .
-docker run --rm -p 8080:5000 night_mission:latest
+docker build -t biscofil/mission-game:1.0.1 .
+docker run --rm -v ${PWD}/volume:/instance -p 8080:5000 biscofil/mission-game:1.0.1
 ```

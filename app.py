@@ -8,7 +8,7 @@ import uuid
 import os
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///night_mission.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mission-game.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 app.secret_key = os.getenv("SECRET_KEY", "default-dev-key")
