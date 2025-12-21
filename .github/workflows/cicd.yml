@@ -1,0 +1,79 @@
+on:
+  push:
+    branches:
+      - master
+name: Workflow
+jobs:
+  # test:
+  #   runs-on: "ubuntu-latest"
+  #   timeout-minutes: 5
+
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
+
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v4
+  #       with:
+  #         python-version: "3.11"
+
+  #     - name: Install dependencies
+  #       run: |
+  #         python -m pip install --upgrade pip
+  #         pip install -r requirements.txt
+
+  #     - name: Run tests
+  #       run: |
+  #         pytest -q
+
+  deploy:
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 5
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install yq for reading/writing YAML
+      - name: Install yq
+        uses: mikefarah/yq@v4
+
+      # Extract current version from config.yaml
+      - name: Get current version
+        id: config_version
+        run: echo "version=$(yq '.version' config.yaml)" >> $GITHUB_OUTPUT
+
+      # Bump the version in config.yaml (patch bump)
+      - name: Bump config.yaml version
+        id: bump-version
+        run: |
+          CURRENT_VERSION=${{ steps.config_version.outputs.version }}
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_VERSION"
+          PATCH=$((PATCH + 1))
+          NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
+          yq -i ".version = \"$NEW_VERSION\"" config.yaml
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+
+      # Commit and tag the new version using existing action
+      - name: Commit and tag
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Bump Helm chart version to ${{ steps.bump-version.outputs.new_version }}"
+          tagging_message: "${{ steps.bump-version.outputs.new_version }}"
+
+      - name: Build container image
+        run: docker build -t biscofil/mission-game:${{ steps.bump-version.outputs.new_version }} -f Dockerfile .
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3.3.0
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Push image to Github hub Container Registry
+        run: docker push biscofil/mission-game:${{ steps.bump-version.outputs.new_version }}
