@@ -72,14 +72,14 @@ def get_or_generate_browser_session_id() -> str:
 
 
 @app.route("/", methods=["GET"])
-def index():
+def home():
     response = make_response(render_template("index.html"))
     response.set_cookie("browser_session_id", get_or_generate_browser_session_id())
     return response
 
 
 @app.route("/new-session", methods=["GET", "POST"])
-def home():
+def new_session():
     if request.method == "POST":
         names = request.form.getlist("names[]")
 
@@ -137,7 +137,9 @@ def home():
 
         db.session.commit()
 
-        return redirect(f"/session?session_uuid={session.m_uuid}")
+        response = make_response(redirect(f"/session?session_uuid={session.m_uuid}"))
+        response.set_cookie("browser_session_id", get_or_generate_browser_session_id())
+        return response
 
     else:
         return render_template("new_session.html")
@@ -165,6 +167,7 @@ def ready():
     else:
         return "Player not found or already checked in", 404
 
+    # No cookie set here
     return redirect(f"/session?session_uuid={session_uuid}")
 
 
@@ -188,6 +191,22 @@ def not_ready():
     else:
         return "Player not found or already checked in", 404
 
+    # No cookie set here
+    return redirect(f"/session?session_uuid={session_uuid}")
+
+
+@app.route("/session/start", methods=["POST"])
+def start_session():
+    session_uuid = request.form.get("session_uuid")
+    session = Session.query.filter_by(m_uuid=session_uuid, started_at=None).first()
+    if not session:
+        return "Session not found or already started", 404
+
+    # Update the session's started_at timestamp
+    session.started_at = db.func.now()
+    db.session.commit()
+
+    # No cookie set here
     return redirect(f"/session?session_uuid={session_uuid}")
 
 
@@ -204,7 +223,20 @@ def session():
         "uuid": session.m_uuid,
         "current_browser_logged": False,
         "players": [],
+        "started_at": session.started_at,
+        "player_mission": None,
     }
+
+    if session.started_at:
+        sm = SessionMission.query.filter_by(
+            session_id=session.id, browser_session_id=browser_session_id
+        ).first()
+        if sm:
+            session_data["player_mission"] = {
+                "mission_description": sm.mission.description,
+                "target_player_name": sm.target_player_name,
+            }
+
     ready = True
     for sm in session.session_missions:
         if sm.browser_session_id == browser_session_id:
@@ -224,47 +256,15 @@ def session():
     # Sort session data by player_name to hide assignment order
     session_data["players"].sort(key=lambda x: x["player_name"])
 
-    return render_template(
-        "session.html",
-        session=session_data,
-        current_browser_session_id=browser_session_id,
-    )
-
-
-@app.route("/session/ready", methods=["POST"])
-def im_ready():
-
-    session_uuid = request.form.get("session_uuid")
-    player_id = request.form.get("player_id")
-    session = Session.query.filter_by(m_uuid=session_uuid).first()
-    if not session:
-        return jsonify({"status": "error", "message": "Session not found"}), 404
-
-    browser_session_id = get_or_generate_browser_session_id()
-
-    any = SessionMission.query.filter_by(
-        session_id=session.id, browser_session_id=browser_session_id
-    ).first()
-    if any:
-        return (
-            jsonify(
-                {
-                    "status": "error",
-                    "message": "This browser session is already associated with a player in this session.",
-                }
-            ),
-            400,
+    response = make_response(
+        render_template(
+            "session.html",
+            session=session_data,
+            current_browser_session_id=browser_session_id,
         )
-
-    # Update the session mission with the browser session ID
-    sm = SessionMission.query.filter_by(
-        session_id=session.id, browser_session_id=None, id=player_id
-    ).first()
-    if sm:
-        sm.browser_session_id = browser_session_id
-        db.session.commit()
-
-    return jsonify({"status": "success"}), 200
+    )
+    response.set_cookie("browser_session_id", browser_session_id)
+    return response
 
 
 if __name__ == "__main__":
