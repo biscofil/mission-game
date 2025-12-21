@@ -5,6 +5,14 @@
 {% block content %}
   <h1>New session</h1>
   <form id="namesForm" method="POST" action="/new-session">
+    <div class="mb-3">
+      <label for="language" class="form-label">Select Language</label>
+      <select id="language" name="language" class="form-select">
+        <option value="en" selected>English</option>
+        <option value="it">Italiano</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
     <div id="namesContainer"></div>
     <div class="mt-3">
       <button type="button" class="btn btn-outline-primary me-2" onclick="addNameInput()">Add Name</button>

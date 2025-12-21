@@ -1,31 +1,909 @@
 {
-  "missions" : [
+  "missions": [
     {
-      "description" : "You need to get a selphie with your target player."
+      "description_en": "Get a selfie with your target player.",
+      "description_it": "Scatta un selfie con il tuo giocatore bersaglio.",
+      "description_fr": "Prenez un selfie avec votre joueur cible."
     },
     {
-      "description" : "You need to get a hug from your target player."
+      "description_en": "Get a hug from your target player.",
+      "description_it": "Abbraccia il tuo giocatore bersaglio.",
+      "description_fr": "Faites un câlin à votre joueur cible."
     },
     {
-      "description" : "You need to get your target player to sing a song."
+      "description_en": "Get your target player to sing a song.",
+      "description_it": "Fai cantare una canzone al tuo giocatore bersaglio.",
+      "description_fr": "Faites chanter une chanson à votre joueur cible."
     },
     {
-      "description" : "You need to get your target player to dance."
+      "description_en": "Get your target player to dance.",
+      "description_it": "Fai ballare il tuo giocatore bersaglio.",
+      "description_fr": "Faites danser votre joueur cible."
     },
     {
-      "description" : "You need to get a high-five from your target player."
+      "description_en": "Get a high-five from your target player.",
+      "description_it": "Fai un high-five con il tuo giocatore bersaglio.",
+      "description_fr": "Tapez dans la main de votre joueur cible."
     },
     {
-      "description" : "You need to get your target player to tell a joke."
+      "description_en": "Get your target player to tell a joke.",
+      "description_it": "Fai raccontare una barzelletta al tuo giocatore bersaglio.",
+      "description_fr": "Faites raconter une blague à votre joueur cible."
     },
     {
-      "description" : "You need to get your target player to share a secret."
+      "description_en": "Get your target player to share a secret.",
+      "description_it": "Fai condividere un segreto al tuo giocatore bersaglio.",
+      "description_fr": "Faites partager un secret à votre joueur cible."
     },
     {
-      "description" : "You need to get your target player to do a funny face."
+      "description_en": "Get your target player to do a funny face.",
+      "description_it": "Fai fare una faccia divertente al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire une grimace à votre joueur cible."
     },
     {
-      "description" : "You need to get your target player to do 10 jumping jacks."
+      "description_en": "Get your target player to do 10 jumping jacks.",
+      "description_it": "Fai fare 10 saltelli al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 10 jumping jacks à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to recite the alphabet backwards.",
+      "description_it": "Fai recitare l'alfabeto al contrario al tuo giocatore bersaglio.",
+      "description_fr": "Faites réciter l'alphabet à l'envers à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the splits.",
+      "description_it": "Fai fare la spaccata al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire les splits à votre joueur cible."
+    },
+    {
+      "description_en": "Get a video of your target player speaking in a foreign accent.",
+      "description_it": "Registra il tuo giocatore bersaglio che parla con un accento straniero.",
+      "description_fr": "Enregistrez votre joueur cible parlant avec un accent étranger."
+    },
+    {
+      "description_en": "Get your target player to wear their shirt backwards.",
+      "description_it": "Fai indossare la maglietta al contrario al tuo giocatore bersaglio.",
+      "description_fr": "Faites porter le t-shirt à l'envers à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to hop on one leg for 30 seconds.",
+      "description_it": "Fai saltare su una gamba per 30 secondi il tuo giocatore bersaglio.",
+      "description_fr": "Faites sauter sur une jambe pendant 30 secondes votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to yodel.",
+      "description_it": "Fai ululare al tuo giocatore bersaglio.",
+      "description_fr": "Faites yodler votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to write their name backwards.",
+      "description_it": "Fai scrivere il nome al contrario al tuo giocatore bersaglio.",
+      "description_fr": "Faites écrire le nom à l'envers à votre joueur cible."
+    },
+    {
+      "description_en": "Get a photo of your target player with a silly hat.",
+      "description_it": "Scatta una foto del tuo giocatore bersaglio con un cappello stupido.",
+      "description_fr": "Prenez une photo de votre joueur cible avec un chapeau ridicule."
+    },
+    {
+      "description_en": "Get your target player to touch their nose with their tongue.",
+      "description_it": "Fai toccare il naso con la lingua al tuo giocatore bersaglio.",
+      "description_fr": "Faites toucher le nez avec la langue à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to compliment someone in front of everyone.",
+      "description_it": "Fai complimentare qualcuno davanti a tutti al tuo giocatore bersaglio.",
+      "description_fr": "Faites complimenter quelqu'un devant tout le monde par votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to sing the national anthem.",
+      "description_it": "Fai cantare l'inno nazionale al tuo giocatore bersaglio.",
+      "description_fr": "Faites chanter l'hymne national à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do a handstand.",
+      "description_it": "Fai fare una verticale al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire un appui frontal à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to spin in circles 10 times.",
+      "description_it": "Fai girare 10 volte il tuo giocatore bersaglio.",
+      "description_fr": "Faites tourner 10 fois en cercle votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak like a pirate for one minute.",
+      "description_it": "Fai parlare come un pirata per un minuto il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler comme un pirate pendant une minute votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the crab walk.",
+      "description_it": "Fai fare il granchio al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la marche du crabe à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to tell an embarrassing story.",
+      "description_it": "Fai raccontare una storia imbarazzante al tuo giocatore bersaglio.",
+      "description_fr": "Faites raconter une histoire embarrassante à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to stand on one leg for one minute.",
+      "description_it": "Fai stare in piedi su una gamba per un minuto il tuo giocatore bersaglio.",
+      "description_fr": "Faites rester sur une jambe pendant une minute votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to whistle the theme song of their favorite show.",
+      "description_it": "Fai fischiettare la sigla della loro serie TV preferita al tuo giocatore bersaglio.",
+      "description_fr": "Faites siffler la chanson thème de leur émission préférée à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to give a speech about why they love their best friend.",
+      "description_it": "Fai fare un discorso sul perché ama il suo migliore amico al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire un discours sur pourquoi ils aiment leur meilleur ami à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 20 push-ups.",
+      "description_it": "Fai fare 20 flessioni al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 20 pompes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to walk backwards for 30 seconds.",
+      "description_it": "Fai camminare all'indietro per 30 secondi il tuo giocatore bersaglio.",
+      "description_fr": "Faites marcher à reculons pendant 30 secondes votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to describe their wildest dream.",
+      "description_it": "Fai descrivere il loro sogno più selvaggio al tuo giocatore bersaglio.",
+      "description_fr": "Faites décrire leur rêve le plus sauvage à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to imitate an animal of your choice.",
+      "description_it": "Fai imitare un animale di tua scelta al tuo giocatore bersaglio.",
+      "description_fr": "Faites imiter un animal de votre choix à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to go without speaking for 5 minutes.",
+      "description_it": "Fai stare zitto per 5 minuti il tuo giocatore bersaglio.",
+      "description_fr": "Faites rester silencieux pendant 5 minutes votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to paint their face like a tiger.",
+      "description_it": "Fai dipingere la faccia come una tigre al tuo giocatore bersaglio.",
+      "description_fr": "Faites peindre le visage comme un tigre à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to read a poem they wrote.",
+      "description_it": "Fai leggere una poesia scritta dal tuo giocatore bersaglio.",
+      "description_fr": "Faites lire un poème qu'ils ont écrit à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the moonwalk.",
+      "description_it": "Fai fare la moonwalk al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la marche lunaire à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak in rhymes for one minute.",
+      "description_it": "Fai parlare in rima per un minuto il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler en rimes pendant une minute votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to share their most embarrassing moment.",
+      "description_it": "Fai condividere il loro momento più imbarazzante al tuo giocatore bersaglio.",
+      "description_fr": "Faites partager leur moment le plus gênant à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the floss dance.",
+      "description_it": "Fai fare il floss dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le floss dance à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to blindfold taste three foods and guess them.",
+      "description_it": "Fai assaggiare bendato tre cibi e farli indovinare al tuo giocatore bersaglio.",
+      "description_fr": "Faites goûter les yeux bandés trois aliments et les deviner à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 30 seconds of karate chops.",
+      "description_it": "Fai fare karate chops per 30 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire des coups de karaté pendant 30 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to give a motivational speech.",
+      "description_it": "Fai fare un discorso motivazionale al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire un discours de motivation à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to draw their self-portrait.",
+      "description_it": "Fai disegnare un loro autoritratto al tuo giocatore bersaglio.",
+      "description_fr": "Faites dessiner leur autoportrait à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the bear crawl across the room.",
+      "description_it": "Fai fare il bear crawl attraverso la stanza al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la marche de l'ours à travers la pièce à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to sing a duet with you.",
+      "description_it": "Fai cantare un duetto con te al tuo giocatore bersaglio.",
+      "description_fr": "Faites chanter un duo avec vous à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to stand on their head.",
+      "description_it": "Fai fare una verticale sulla testa al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire l'équilibre sur la tête à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the worm on the ground.",
+      "description_it": "Fai fare il verme per terra al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le ver par terre à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak in a baby voice for 2 minutes.",
+      "description_it": "Fai parlare con una voce da bebè per 2 minuti il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler avec une voix de bébé pendant 2 minutes votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do a cartwheel.",
+      "description_it": "Fai fare una ruota al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire une roue à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to smell three mystery items and guess them.",
+      "description_it": "Fai odorare tre oggetti misteriosi e farli indovinare al tuo giocatore bersaglio.",
+      "description_fr": "Faites sentir trois objets mystérieux et les deviner à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do their best impression of a celebrity.",
+      "description_it": "Fai fare la migliore imitazione di una celebrità al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire votre meilleure imitation d'une célébrité à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to wear their shoes on the wrong feet.",
+      "description_it": "Fai indossare le scarpe ai piedi sbagliati al tuo giocatore bersaglio.",
+      "description_fr": "Faites mettre les chaussures aux mauvais pieds à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do a barrel roll.",
+      "description_it": "Fai fare un capriola al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire un rouleau à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak in Shakespearean English for one minute.",
+      "description_it": "Fai parlare in inglese shakespeariano per un minuto il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler en anglais shakespearien pendant une minute votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the Superman pose for 20 seconds.",
+      "description_it": "Fai fare la posa di Superman per 20 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la pose de Superman pendant 20 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to list 10 reasons why they are awesome.",
+      "description_it": "Fai elencare 10 motivi per cui è fantastico al tuo giocatore bersaglio.",
+      "description_fr": "Faites énumérer 10 raisons pour lesquelles ils sont fantastiques à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to rub their belly and pat their head at the same time.",
+      "description_it": "Fai strofinare la pancia e battere la testa allo stesso tempo al tuo giocatore bersaglio.",
+      "description_fr": "Faites frotter le ventre et taper la tête en même temps à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the running man dance.",
+      "description_it": "Fai fare il running man dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse du coureur à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to recite a tongue twister three times fast.",
+      "description_it": "Fai recitare uno scioglilingua tre volte velocemente al tuo giocatore bersaglio.",
+      "description_fr": "Faites réciter un virelangue trois fois rapidement à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the Cupid Shuffle.",
+      "description_it": "Fai fare il Cupid Shuffle al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le Cupid Shuffle à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to walk like a chicken.",
+      "description_it": "Fai camminare come una gallina il tuo giocatore bersaglio.",
+      "description_fr": "Faites marcher comme une poule votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 15 burpees.",
+      "description_it": "Fai fare 15 burpees al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 15 burpees à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to say their full name backwards.",
+      "description_it": "Fai dire il nome completo al contrario al tuo giocatore bersaglio.",
+      "description_fr": "Faites dire le nom complet à l'envers à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the cha-cha slide.",
+      "description_it": "Fai fare il cha-cha slide al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le cha-cha slide à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to juggle three items.",
+      "description_it": "Fai jugglare tre oggetti al tuo giocatore bersaglio.",
+      "description_fr": "Faites jongler trois objets à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do an impression of a TV news reporter.",
+      "description_it": "Fai fare un'imitazione di un giornalista TV al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire une imitation d'un journaliste de la télévision à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to sing a song in a different language.",
+      "description_it": "Fai cantare una canzone in una lingua diversa al tuo giocatore bersaglio.",
+      "description_fr": "Faites chanter une chanson dans une autre langue à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 40 seconds of high knees.",
+      "description_it": "Fai fare 40 secondi di corsa ad alte ginocchia al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 40 secondes de genoux hauts à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to teach someone a dance move.",
+      "description_it": "Fai insegnare un movimento di danza a qualcuno al tuo giocatore bersaglio.",
+      "description_fr": "Faites enseigner un pas de danse à quelqu'un à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the Macarena.",
+      "description_it": "Fai fare la Macarena al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la Macarena à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to balance a book on their head.",
+      "description_it": "Fai equilibrare un libro sulla testa al tuo giocatore bersaglio.",
+      "description_fr": "Faites équilibrer un livre sur la tête à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to give a thumbs up in 5 different styles.",
+      "description_it": "Fai fare il pollice in su in 5 stili diversi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire un pouce levé dans 5 styles différents à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the twist.",
+      "description_it": "Fai fare il twist al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le twist à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to take a selfie with a stranger.",
+      "description_it": "Fai scattare un selfie con uno sconosciuto al tuo giocatore bersaglio.",
+      "description_fr": "Faites prendre un selfie avec un étranger à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the Harlem Shake.",
+      "description_it": "Fai fare l'Harlem Shake al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le Harlem Shake à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to write a haiku poem.",
+      "description_it": "Fai scrivere una poesia haiku al tuo giocatore bersaglio.",
+      "description_fr": "Faites écrire un poème haïku à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 25 squats.",
+      "description_it": "Fai fare 25 squat al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 25 squats à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak like a robot for 1 minute.",
+      "description_it": "Fai parlare come un robot per 1 minuto il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler comme un robot pendant 1 minute votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the disco point.",
+      "description_it": "Fai fare il disco point al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le disco point à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to mimic someone else's voice.",
+      "description_it": "Fai imitare la voce di qualcun altro al tuo giocatore bersaglio.",
+      "description_fr": "Faites imiter la voix de quelqu'un d'autre à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do a plank for 30 seconds.",
+      "description_it": "Fai fare una plancia per 30 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire une planche pendant 30 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the zombie walk.",
+      "description_it": "Fai fare il zombie walk al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la marche des zombies à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to create an acronym from their name.",
+      "description_it": "Fai creare un acronimo dal nome al tuo giocatore bersaglio.",
+      "description_fr": "Faites créer un acronyme à partir de leur nom à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the Flappy Bird dance.",
+      "description_it": "Fai fare il Flappy Bird dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse Flappy Bird à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to whisper something funny to everyone.",
+      "description_it": "Fai sussurrare qualcosa di divertente a tutti al tuo giocatore bersaglio.",
+      "description_fr": "Faites chuchoter quelque chose de drôle à tout le monde à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do lunges across the room.",
+      "description_it": "Fai fare affondi attraverso la stanza al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire des fentes à travers la pièce à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the whip.",
+      "description_it": "Fai fare il whip al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le whip à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak in a Scottish accent for 2 minutes.",
+      "description_it": "Fai parlare con accento scozzese per 2 minuti il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler avec un accent écossais pendant 2 minutes votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the icy hot game (say ice/fire alternately).",
+      "description_it": "Fai giocare il gioco caldo freddo al tuo giocatore bersaglio.",
+      "description_fr": "Faites jouer au jeu chaud-froid à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the stanky leg.",
+      "description_it": "Fai fare lo stanky leg al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le stanky leg à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to create a poem about their pet or friend.",
+      "description_it": "Fai scrivere una poesia sul proprio animale domestico al tuo giocatore bersaglio.",
+      "description_fr": "Faites écrire un poème sur leur animal domestique à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do wall sits for 20 seconds.",
+      "description_it": "Fai fare wall sits per 20 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire des sits muraux pendant 20 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the dabbing movement.",
+      "description_it": "Fai fare il dabbing al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le dabbing à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak in alliteration for 1 minute.",
+      "description_it": "Fai parlare con allitterazione per 1 minuto il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler en allitération pendant 1 minute votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do mountain climbers for 30 seconds.",
+      "description_it": "Fai fare mountain climbers per 30 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire des grimpeurs de montagne pendant 30 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the griddy dance.",
+      "description_it": "Fai fare il griddy dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse griddy à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to write down their biggest fear.",
+      "description_it": "Fai scrivere la loro più grande paura al tuo giocatore bersaglio.",
+      "description_fr": "Faites écrire leur plus grande peur à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do diamond push-ups.",
+      "description_it": "Fai fare flessioni a diamante al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire des pompes en diamant à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the shoulder shimmy.",
+      "description_it": "Fai fare il shoulder shimmy al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le shimmy des épaules à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak only in questions for 2 minutes.",
+      "description_it": "Fai parlare solo in domande per 2 minuti il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler uniquement sous forme de questions pendant 2 minutes votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do reverse lunges.",
+      "description_it": "Fai fare affondi inversi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire des fentes inverses à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the shoot dance.",
+      "description_it": "Fai fare lo shoot dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse du tir à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the renegade dance.",
+      "description_it": "Fai fare il renegade dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse renegade à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to eat a spoonful of cinnamon.",
+      "description_it": "Fai mangiare un cucchiaio di cannella al tuo giocatore bersaglio.",
+      "description_fr": "Faites manger une cuillerée de cannelle à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to call a friend and tell them a joke.",
+      "description_it": "Fai chiamare un amico e raccontare una barzelletta al tuo giocatore bersaglio.",
+      "description_fr": "Faites appeler un ami et raconter une blague à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do a backflip.",
+      "description_it": "Fai fare un backflip al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire un salto arrière à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to drink water while standing on one leg.",
+      "description_it": "Fai bere acqua stando su una gamba al tuo giocatore bersaglio.",
+      "description_fr": "Faites boire de l'eau en se tenant sur une jambe à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to text their crush a compliment.",
+      "description_it": "Fai mandare un SMS di complimenti a una persona speciale al tuo giocatore bersaglio.",
+      "description_fr": "Faites envoyer un texte de compliment à leur béguin à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the tootsie roll.",
+      "description_it": "Fai fare il tootsie roll al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le tootsie roll à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to lick their elbow.",
+      "description_it": "Fai leccare il gomito al tuo giocatore bersaglio.",
+      "description_fr": "Faites lécher le coude à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do a front flip.",
+      "description_it": "Fai fare una capriola in avanti al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire un salto avant à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to tie their shoes with their eyes closed.",
+      "description_it": "Fai allacciare le scarpe con gli occhi chiusi al tuo giocatore bersaglio.",
+      "description_fr": "Faites lacer les chaussures les yeux fermés à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 50 jumping jacks without stopping.",
+      "description_it": "Fai fare 50 saltelli consecutivi al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 50 jumping jacks sans arrêt à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to gargle water and sing.",
+      "description_it": "Fai gargarizzare e cantare al tuo giocatore bersaglio.",
+      "description_fr": "Faites se gargariser et chanter à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to write their name with their non-dominant hand.",
+      "description_it": "Fai scrivere il nome con la mano non dominante al tuo giocatore bersaglio.",
+      "description_fr": "Faites écrire le nom avec leur main non dominante à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the sicko mode dance.",
+      "description_it": "Fai fare il sicko mode dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse sicko mode à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to hold ice cubes in their hands for 30 seconds.",
+      "description_it": "Fai tenere cubetti di ghiaccio in mano per 30 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites tenir des glaçons dans les mains pendant 30 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name 20 vegetables without repeating.",
+      "description_it": "Fai nominare 20 verdure senza ripetere al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer 20 légumes sans répéter à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the bop it dance.",
+      "description_it": "Fai fare il bop it dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse bop it à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to eat a lemon wedge.",
+      "description_it": "Fai mangiare uno spicchio di limone al tuo giocatore bersaglio.",
+      "description_fr": "Faites manger une tranche de citron à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 100 seconds of dancing non-stop.",
+      "description_it": "Fai ballare per 100 secondi senza fermarsi al tuo giocatore bersaglio.",
+      "description_fr": "Faites danser pendant 100 secondes sans arrêt à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to cross their eyes and hold for 10 seconds.",
+      "description_it": "Fai incrociare gli occhi e tenere per 10 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites loucher et tenir 10 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to list 15 different pizza toppings.",
+      "description_it": "Fai elencare 15 diversi condimenti per pizza al tuo giocatore bersaglio.",
+      "description_fr": "Faites énumérer 15 garnitures de pizza différentes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the dougie.",
+      "description_it": "Fai fare il dougie al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le dougie à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to shave whipped cream off their face without hands.",
+      "description_it": "Fai rasare la panna montata dal viso senza mani al tuo giocatore bersaglio.",
+      "description_fr": "Faites raser la crème fouettée du visage sans mains à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 10 cartwheels in a row.",
+      "description_it": "Fai fare 10 ruote consecutive al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 10 roues d'affilée à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to say their alphabet backwards in under 30 seconds.",
+      "description_it": "Fai recitare l'alfabeto al contrario in meno di 30 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites réciter l'alphabet à l'envers en moins de 30 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the woah dance.",
+      "description_it": "Fai fare il woah dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse woah à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to eat a spoonful of mayo.",
+      "description_it": "Fai mangiare un cucchiaio di maionese al tuo giocatore bersaglio.",
+      "description_fr": "Faites manger une cuillerée de mayonnaise à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to count to 50 in Spanish.",
+      "description_it": "Fai contare fino a 50 in spagnolo al tuo giocatore bersaglio.",
+      "description_fr": "Faites compter jusqu'à 50 en espagnol à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the dab walk.",
+      "description_it": "Fai camminare mentre fa il dab al tuo giocatore bersaglio.",
+      "description_fr": "Faites marcher en faisait le dab à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to laugh without making any sound for 20 seconds.",
+      "description_it": "Fai ridere senza fare rumore per 20 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites rire sans faire de bruit pendant 20 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name every country that starts with A.",
+      "description_it": "Fai nominare ogni paese che inizia con A al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer chaque pays commençant par A à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the goofy dance.",
+      "description_it": "Fai fare una danza sciocca al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire une danse stupide à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to drink pickle juice.",
+      "description_it": "Fai bere aceto di cetrioli al tuo giocatore bersaglio.",
+      "description_fr": "Faites boire du jus de cornichon à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to recite the multiplication table of 7.",
+      "description_it": "Fai recitare la tavola pitagorica del 7 al tuo giocatore bersaglio.",
+      "description_fr": "Faites réciter la table de multiplication par 7 à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the kick dance.",
+      "description_it": "Fai fare il kick dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse de coup de pied à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to apply lipstick without a mirror.",
+      "description_it": "Fai applicare il rossetto senza specchio al tuo giocatore bersaglio.",
+      "description_fr": "Faites appliquer du rouge à lèvres sans miroir à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to hum a song while eating crackers.",
+      "description_it": "Fai canticchiare una canzone mentre mangia cracker al tuo giocatore bersaglio.",
+      "description_fr": "Faites fredonner une chanson en mangeant des biscuits à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the lean back.",
+      "description_it": "Fai fare il lean back al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le lean back à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to balance on one foot and spin around.",
+      "description_it": "Fai bilanciare su un piede e girare al tuo giocatore bersaglio.",
+      "description_fr": "Faites équilibrer sur un pied et tourner à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name 10 Disney characters.",
+      "description_it": "Fai nominare 10 personaggi Disney al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer 10 personnages Disney à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the stanky dance.",
+      "description_it": "Fai fare lo stanky dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse stanky à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to eat a raw onion slice.",
+      "description_it": "Fai mangiare una fetta di cipolla cruda al tuo giocatore bersaglio.",
+      "description_fr": "Faites manger une tranche d'oignon cru à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to spell their name with their entire body.",
+      "description_it": "Fai scrivere il nome con tutto il corpo al tuo giocatore bersaglio.",
+      "description_fr": "Faites écrire le nom avec tout le corps à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the electric slide.",
+      "description_it": "Fai fare l'electric slide al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la diapositive électrique à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to touch their nose, then their ears, then their knees rapidly.",
+      "description_it": "Fai toccare il naso, le orecchie e le ginocchia rapidamente al tuo giocatore bersaglio.",
+      "description_fr": "Faites toucher le nez, puis les oreilles, puis les genoux rapidement à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to list 20 boy bands.",
+      "description_it": "Fai elencare 20 boy band al tuo giocatore bersaglio.",
+      "description_fr": "Faites énumérer 20 boys bands à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the jelly roll dance.",
+      "description_it": "Fai fare il jelly roll dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse jelly roll à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to drink a glass of water in one gulp.",
+      "description_it": "Fai bere un bicchiere d'acqua in un sorso al tuo giocatore bersaglio.",
+      "description_fr": "Faites boire un verre d'eau en une gorgée à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to write a short love letter to inanimate object.",
+      "description_it": "Fai scrivere una lettera d'amore a un oggetto inanimato al tuo giocatore bersaglio.",
+      "description_fr": "Faites écrire une courte lettre d'amour à un objet inanimé à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the crank that soulja boy.",
+      "description_it": "Fai fare il crank that soulja boy al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le crank that soulja boy à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to hold their breath for 30 seconds.",
+      "description_it": "Fai trattenere il respiro per 30 secondi al tuo giocatore bersaglio.",
+      "description_fr": "Faites retenir le souffle pendant 30 secondes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name all the continents.",
+      "description_it": "Fai nominare tutti i continenti al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer tous les continents à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the chicken dance.",
+      "description_it": "Fai fare il chicken dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse du poulet à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to apply makeup on someone else with their eyes closed.",
+      "description_it": "Fai applicare trucco a qualcuno con gli occhi chiusi al tuo giocatore bersaglio.",
+      "description_fr": "Faites appliquer du maquillage à quelqu'un les yeux fermés à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to recite a movie quote.",
+      "description_it": "Fai recitare una citazione di un film al tuo giocatore bersaglio.",
+      "description_fr": "Faites réciter une citation de film à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the teach me how to dougie.",
+      "description_it": "Fai fare il teach me how to dougie al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le teach me how to dougie à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to juggle food items.",
+      "description_it": "Fai jugglare oggetti alimentari al tuo giocatore bersaglio.",
+      "description_fr": "Faites jongler des articles alimentaires à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name 5 types of pasta.",
+      "description_it": "Fai nominare 5 tipi di pasta al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer 5 types de pâtes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the running man backwards.",
+      "description_it": "Fai fare il running man al contrario al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire le running man à reculons à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to mix two foods together and eat it.",
+      "description_it": "Fai mescolare due cibi e mangiarli al tuo giocatore bersaglio.",
+      "description_fr": "Faites mélanger deux aliments ensemble et les manger à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 15 chest bumps with different people.",
+      "description_it": "Fai fare 15 spallate a diverse persone al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 15 coups d'épaule avec différentes personnes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name 5 countries in Africa.",
+      "description_it": "Fai nominare 5 paesi in Africa al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer 5 pays en Afrique à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the side to side dance.",
+      "description_it": "Fai fare il side to side dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse côté à côté à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to wear two different colored socks.",
+      "description_it": "Fai indossare calzini di due colori diversi al tuo giocatore bersaglio.",
+      "description_fr": "Faites porter des chaussettes de deux couleurs différentes à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to speak in an Irish accent for 3 minutes.",
+      "description_it": "Fai parlare con accento irlandese per 3 minuti il tuo giocatore bersaglio.",
+      "description_fr": "Faites parler avec un accent irlandais pendant 3 minutes votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name 10 Marvel superheroes.",
+      "description_it": "Fai nominare 10 supereroi Marvel al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer 10 superhéros Marvel à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the butterfly stroke on the ground.",
+      "description_it": "Fai fare il butterfly stroke per terra al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la brasse papillon au sol à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to say an entire sentence without using the letter E.",
+      "description_it": "Fai dire una frase intera senza usare la lettera E al tuo giocatore bersaglio.",
+      "description_fr": "Faites dire une phrase entière sans utiliser la lettre E à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do a handshake with everyone in the room.",
+      "description_it": "Fai stringere la mano a tutti in stanza al tuo giocatore bersaglio.",
+      "description_fr": "Faites serrer la main à tout le monde dans la pièce à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to list 5 Shakespeare plays.",
+      "description_it": "Fai elencare 5 opere di Shakespeare al tuo giocatore bersaglio.",
+      "description_fr": "Faites énumérer 5 pièces de Shakespeare à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the bicycle kick dance.",
+      "description_it": "Fai fare il bicycle kick dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse des coups de pied de vélo à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to walk like they're in slow motion for 1 minute.",
+      "description_it": "Fai camminare come in slow motion per 1 minuto il tuo giocatore bersaglio.",
+      "description_fr": "Faites marcher comme au ralenti pendant 1 minute votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to describe a color without saying its name.",
+      "description_it": "Fai descrivere un colore senza dire il nome al tuo giocatore bersaglio.",
+      "description_fr": "Faites décrire une couleur sans dire son nom à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the sprinkler dance.",
+      "description_it": "Fai fare lo sprinkler dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse du sprinkler à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name 8 elements on the periodic table.",
+      "description_it": "Fai nominare 8 elementi della tavola periodica al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer 8 éléments du tableau périodique à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do 20 seconds of high intensity cardio.",
+      "description_it": "Fai fare 20 secondi di cardio ad alta intensità al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire 20 secondes de cardio haute intensité à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to pair socks in a blindfold.",
+      "description_it": "Fai abbinare calzini bendato al tuo giocatore bersaglio.",
+      "description_fr": "Faites appareiller des chaussettes les yeux bandés à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to do the hip thrust dance.",
+      "description_it": "Fai fare il hip thrust dance al tuo giocatore bersaglio.",
+      "description_fr": "Faites faire la danse de poussée de la hanche à votre joueur cible."
+    },
+    {
+      "description_en": "Get your target player to name 6 US states that start with M.",
+      "description_it": "Fai nominare 6 stati USA che iniziano con M al tuo giocatore bersaglio.",
+      "description_fr": "Faites nommer 6 états américains commençant par M à votre joueur cible."
     }
   ]
 }
