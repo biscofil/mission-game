@@ -20,6 +20,7 @@ def client():
                     description_en=f"English Mission {i}",
                     description_it=f"Missione Italiana {i}",
                     description_fr=f"Mission Française {i}",
+                    approved_on=db.func.now(),
                 )
             )
         db.session.commit()

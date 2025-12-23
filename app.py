@@ -116,7 +116,7 @@ def new_session():
             )
 
         missions = Mission.query \
-            .filter_by(approved_on=None) \
+            .filter(Mission.approved_on != None) \
             .order_by(db.func.random()) \
             .limit(len(names)) \
             .all()
