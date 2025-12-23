@@ -29,42 +29,29 @@ jobs:
   deploy:
     runs-on: "ubuntu-latest"
     timeout-minutes: 5
+    needs: test
 
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
       contents: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-      # Install yq for reading/writing YAML
-      - name: Install yq
-        uses: mikefarah/yq@v4
-
-      # Extract current version from config.yaml
-      - name: Get current version
-        id: config_version
-        run: echo "version=$(yq '.version' config.yaml)" >> $GITHUB_OUTPUT
-
-      # Bump the version in config.yaml (patch bump)
-      - name: Bump config.yaml version
+      - name: Get latest tag and bump version
         id: bump-version
         run: |
-          CURRENT_VERSION=${{ steps.config_version.outputs.version }}
-          IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_VERSION"
-          PATCH=$((PATCH + 1))
-          NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
-          yq -i ".version = \"$NEW_VERSION\"" config.yaml
+          LATEST_TAG=$(git tag -l 'v*' --sort=-version:refname | head -1)
+          if [ -z "$LATEST_TAG" ]; then
+            NEW_VERSION="v0.0.1"
+          else
+            IFS='.' read -r MAJOR MINOR PATCH <<< "${LATEST_TAG#v}"
+            PATCH=$((PATCH + 1))
+            NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
+          fi
           echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
-
-      # Commit and tag the new version using existing action
-      - name: Commit and tag
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Bump Helm chart version to ${{ steps.bump-version.outputs.new_version }}"
-          tagging_message: "${{ steps.bump-version.outputs.new_version }}"
 
       - name: Build container image
         run: docker build -t biscofil/mission-game:${{ steps.bump-version.outputs.new_version }} -f Dockerfile .
@@ -75,5 +62,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Push image to Github hub Container Registry
+      - name: Push image to Docker Hub
         run: docker push biscofil/mission-game:${{ steps.bump-version.outputs.new_version }}
+
+      - name: Create git tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag ${{ steps.bump-version.outputs.new_version }}
+          git push origin ${{ steps.bump-version.outputs.new_version }}
