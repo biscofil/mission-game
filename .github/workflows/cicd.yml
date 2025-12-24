@@ -2,6 +2,10 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
+
 name: Workflow
 jobs:
   test:
@@ -24,12 +28,13 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m pytest
+          coverage run -m pytest
 
   deploy:
     runs-on: "ubuntu-latest"
     timeout-minutes: 5
     needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
 
     permissions:
       contents: write
