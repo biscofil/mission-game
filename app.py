@@ -175,7 +175,9 @@ def new_session():
 @app.route("/session/ready", methods=["POST"])
 def ready():
     session_uuid = request.form.get("session_uuid")
-    session = Session.query.filter_by(m_uuid=session_uuid).filter_by(started_at=None).first()
+    session = (
+        Session.query.filter_by(m_uuid=session_uuid).filter_by(started_at=None).first()
+    )
     if not session:
         return "Session not found or already started", 404
 
@@ -228,9 +230,11 @@ def start_session():
     session = Session.query.filter_by(m_uuid=session_uuid, started_at=None).first()
     if not session:
         return "Session not found or already started", 404
-    
+
     # Check if all players are ready
-    not_ready_players = SessionMission.query.filter_by(session_id=session.id, browser_session_id=None).all()
+    not_ready_players = SessionMission.query.filter_by(
+        session_id=session.id, browser_session_id=None
+    ).all()
     if not_ready_players:
         return "Not all players are ready", 400
 
@@ -240,6 +244,11 @@ def start_session():
 
     # No cookie set here
     return redirect(f"/session?session_uuid={session_uuid}")
+
+
+@app.route("/rules", methods=["GET"])
+def rules():
+    return render_template("rules.html")
 
 
 @app.route("/session", methods=["GET"])
