@@ -3,6 +3,7 @@
 {% block title %}New session - Mission game{% endblock %}
 
 {% block content %}
+<div class="card_with_bg">
   <h1>New session</h1>
   <form id="namesForm" method="POST" action="/new-session">
     <div class="mb-3">
@@ -19,8 +20,9 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
+</div>
 {% endblock %}
 
 {% block scripts %}
-  <script src="/static/new_session.js"></script>
+<script src="/static/new_session.js"></script>
 {% endblock %}

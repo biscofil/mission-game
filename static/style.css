@@ -44,3 +44,10 @@ button:hover {
 .remove-btn:hover {
   background-color: #da190b;
 }
+
+.card_with_bg {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: var(--bs-gray-300);
+}
