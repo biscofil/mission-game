@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Rules - Mission game{% endblock %}
+
+{% block content %}
+<div class="card_with_bg">
+  <h1>Rules</h1>
+
+  <p>Here are the rules for the mission game:</p>
+  <ul>
+    <li>The game requires at least 3 players to start.</li>
+    <li>The game lasts until the end of the night or for a predetermined amount of time.</li>
+    <li>Each player is assigned a secret mission and a target player.</li>
+    <li>All players play at the same time, trying to complete their missions at any time of the game.</li>
+    <li>Players can only see their own mission and the name of the player they are assigned to.</li>
+    <li>The game starts when all players are ready.</li>
+    <li>When a player successfully completes their mission with their target player, they will show their mission to the
+      target player who should confirm the completion.</li>
+    <li>Not all players have to be informed of the elimination of a player. It can be kept secret between the player who
+      eliminated and the eliminated player.</li>
+    <li>Upon completion of a mission, the player who completed it will eliminate their target player and take over their
+      mission and target player.</li>
+    <li>The winner is the player who eliminates the most players by the end of the game.</li>
+  </ul>
+
+  <h2>Example</h2>
+  <p>For example, if there are three players: Alice, Bob, and Carol.</p>
+
+  <ul>
+    <li>Alice's mission: "Make Bob laugh."</li>
+    <li>Bob's mission: "Get Carol to sing a song."</li>
+    <li>Carol's mission: "Convince Alice to dance."</li>
+  </ul>
+
+  <p>Alice must find a way to make Bob laugh without revealing her mission to anyone. Similarly, Bob and Carol must
+    complete their missions without giving away their objectives.</p>
+
+  <p>If/when Alice succeeds in completing her mission, making Bob laugh, she will eliminate him from the game and she
+    will get his mission and target player. Thus, she will have to get Carol to sing.</p>
+
+  <p>If no other elimination occurs until the end of the game, Alice will be the winner as she eliminated the most
+    players (1) compared to Bob (0) and Carol (0). </p>
+
+  <p>Good luck and have fun!</p>
+
+</div>
+
+
+<img src="/static/rules.png" alt="Rules" class="img-fluid mt-3" />
+
+{% endblock %}
