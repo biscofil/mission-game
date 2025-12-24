@@ -115,12 +115,13 @@ def new_session():
                 400,
             )
 
-        missions = Mission.query \
-            .filter(Mission.approved_on != None) \
-            .order_by(db.func.random()) \
-            .limit(len(names)) \
+        missions = (
+            Mission.query.filter(Mission.approved_on != None)
+            .order_by(db.func.random())
+            .limit(len(names))
             .all()
-        
+        )
+
         if len(missions) < len(names):
             return (
                 jsonify(
@@ -174,9 +175,9 @@ def new_session():
 @app.route("/session/ready", methods=["POST"])
 def ready():
     session_uuid = request.form.get("session_uuid")
-    session = Session.query.filter_by(m_uuid=session_uuid).first()
+    session = Session.query.filter_by(m_uuid=session_uuid).filter_by(started_at=None).first()
     if not session:
-        return "Session not found", 404
+        return "Session not found or already started", 404
 
     player_id = request.form.get("player_id")
 
@@ -200,9 +201,9 @@ def ready():
 @app.route("/session/not_ready", methods=["POST"])
 def not_ready():
     session_uuid = request.form.get("session_uuid")
-    session = Session.query.filter_by(m_uuid=session_uuid).first()
+    session = Session.query.filter_by(m_uuid=session_uuid, started_at=None).first()
     if not session:
-        return "Session not found", 404
+        return "Session not found or already started", 404
 
     browser_session_id = get_browser_session_id()
     if not browser_session_id:
@@ -227,6 +228,11 @@ def start_session():
     session = Session.query.filter_by(m_uuid=session_uuid, started_at=None).first()
     if not session:
         return "Session not found or already started", 404
+    
+    # Check if all players are ready
+    not_ready_players = SessionMission.query.filter_by(session_id=session.id, browser_session_id=None).all()
+    if not_ready_players:
+        return "Not all players are ready", 400
 
     # Update the session's started_at timestamp
     session.started_at = db.func.now()

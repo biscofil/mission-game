@@ -171,3 +171,61 @@ def test_session_shows_translated_mission(client):
         assert mission_text is not None
         assert len(mission_text) > 0
         assert "Française" in mission_text  # Check for French accent support
+
+def test_end_to_end_session_flow(client):
+    # Create a new session
+    data = MultiDict([
+        ("names[]", "Alice"),
+        ("names[]", "Bob"),
+        ("names[]", "Charlie"),
+        ("language", "en"),
+    ])
+    resp = client.post("/new-session", data=data, follow_redirects=False)
+    assert resp.status_code in (302, 303)
+    location = resp.headers.get("Location", resp.location or "")
+    assert "/session?session_uuid=" in location
+
+    session_uuid = location.split("session_uuid=")[-1]
+    session = Session.query.filter_by(m_uuid=session_uuid).first()
+
+    players = SessionMission.query.filter_by(session_id=session.id).all()
+
+    # Mark player 1 as ready
+    client.set_cookie("browser_session_id", "test-browser-session1")
+    resp = client.post("/session/ready", data={"session_uuid": session_uuid, "player_id": players[0].id})
+    print("Player 1 ready response status:", resp.text)
+    assert resp.status_code in (302, 303)
+
+    # Mark player 1 as not ready
+    client.set_cookie("browser_session_id", "test-browser-session1")
+    resp = client.post("/session/not_ready", data={"session_uuid": session_uuid})
+    assert resp.status_code in (302, 303)
+
+    # Mark player 1 as ready
+    client.set_cookie("browser_session_id", "test-browser-session1")
+    resp = client.post("/session/ready", data={"session_uuid": session_uuid, "player_id": players[0].id})
+    assert resp.status_code in (302, 303)
+
+    # Mark player 2 as ready
+    client.set_cookie("browser_session_id", "test-browser-session2")
+    resp = client.post("/session/ready", data={"session_uuid": session_uuid, "player_id": players[1].id})
+    assert resp.status_code in (302, 303)
+
+    # Start session - should fail because player 3 is not ready
+    resp = client.post("/session/start", data={"session_uuid": session_uuid})
+    assert resp.status_code == 400
+
+    # Mark player 3 as ready
+    client.set_cookie("browser_session_id", "test-browser-session3")
+    resp = client.post("/session/ready", data={"session_uuid": session_uuid, "player_id": players[2].id})
+    assert resp.status_code in (302, 303)
+
+    # Start session - should succeed now that all players are ready
+    resp = client.post("/session/start", data={"session_uuid": session_uuid})
+    assert resp.status_code in (302, 303)
+
+
+
+
+
+
