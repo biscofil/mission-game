@@ -102,7 +102,7 @@ def new_session():
             language = "en"
 
         # Clean names: remove empty and duplicate names
-        names = [name.strip() for name in names if name.strip()]
+        names = [name.strip().capitalize() for name in names if name.strip()]
         names = list(dict.fromkeys(names))
         if len(names) < 3 or len(names) > 20:
             return (
